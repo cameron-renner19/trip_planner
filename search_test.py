@@ -16,7 +16,8 @@ def update_results(*args):
         cursor.execute("""
         SELECT city, country, population, lat, lng
         FROM cities
-        WHERE city LIKE ?
+        WHERE city_ascii LIKE ?
+        ORDER BY population DESC
         LIMIT 10
         """, (f"{query}%",))
         results = cursor.fetchall()
