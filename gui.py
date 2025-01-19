@@ -17,6 +17,7 @@ class Ui:
     button.grid(padx=10, pady=10)
     window.mainloop()
 
+
 if __name__ == '__main__':
-    Ui()
+    ui = Ui()
 
